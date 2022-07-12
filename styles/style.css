@@ -1,1 +1,40 @@
-/*# sourceMappingURL=style.css.map */
+.top-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#makeListBtn {
+  margin-top: 20px;
+  height: 35px;
+  width: 100px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 50px;
+}
+.container .list {
+  width: 300px;
+  min-height: 300px;
+  text-align: center;
+  background-color: bisque;
+}
+.container .list .item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.even {
+  background-color: rgb(255, 205, 129);
+}
+
+.odd {
+  background-color: rgb(255, 188, 88);
+}/*# sourceMappingURL=style.css.map */

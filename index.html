@@ -5,8 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <script src="/script.js" defer></script>
   </head>
   <body>
-    <h1>My To Do List</h1>
+    <div class="top-part">
+      <h1>My To Do List</h1>
+      <button id="makeListBtn">Make a List</button>
+    </div>
+    <div class="container">
+      <div class="list">
+        <h3>List Name</h3>
+        <div class="item odd">
+          <p>Do this</p>
+          <button class="markDoneBtn">Mark as Done</button>
+          <button class="deleteBtn">Delete</button>
+        </div>
+        <div class="item even">
+          <p>Do that</p>
+          <button class="markDoneBtn">Mark as Done</button>
+          <button class="deleteBtn">Delete</button>
+        </div>
+        <div class="item odd">
+          <p>Also this</p>
+          <button class="markDoneBtn">Mark as Done</button>
+          <button class="deleteBtn">Delete</button>
+        </div>
+        <div class="item even">
+          <p>And finally that</p>
+          <button class="markDoneBtn">Mark as Done</button>
+          <button class="deleteBtn">Delete</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

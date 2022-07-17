@@ -69,4 +69,8 @@
 
 .odd {
   background-color: rgb(255, 188, 88);
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

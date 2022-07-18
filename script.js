@@ -45,15 +45,17 @@ function displayList(name, list, dueDate) {
   listName.classList.add('listName');
   listContainer.appendChild(listName);
   for (let i = 1; i <= list.length; i++) {
+    const itemDiv = document.createElement('div');
     const item = document.createElement('p');
-    item.classList.add('item');
+    itemDiv.classList.add('item');
     if (i % 2 == 0) {
-      item.classList.add('even');
+      itemDiv.classList.add('even');
     } else {
-      item.classList.add('odd');
+      itemDiv.classList.add('odd');
     }
-    listContainer.appendChild(item);
-    item.innerHTML = list[i - 1];
+    listContainer.appendChild(itemDiv);
+    itemDiv.appendChild(item);
+    item.innerHTML = `> ${list[i - 1]}`;
   }
   const dueDateDisplay = document.createElement('p');
   dueDateDisplay.classList.add('dueDate');

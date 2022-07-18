@@ -26,6 +26,10 @@ function listPrompt() {
       const item = document.querySelector(`#listItem${i}`);
       list.push(`${item.value}`);
     }
+    for (let i = 2; i < id; i++) {
+      const item = document.querySelector(`#listItem${i}`);
+      item.remove();
+    }
     generateList(listNameInput.value, list, dueDateInput.value);
   };
 }

@@ -75,4 +75,8 @@
 
 .hide {
   display: none;
+}
+
+.due {
+  background-color: rgb(255, 142, 176);
 }/*# sourceMappingURL=style.css.map */

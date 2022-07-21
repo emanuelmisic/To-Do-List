@@ -84,14 +84,27 @@ function displayList(id, name, list, dueDate) {
   for (let i = 1; i <= list.length; i++) {
     const itemDiv = document.createElement('div');
     const item = document.createElement('p');
+    const deleteBtn = document.createElement('button');
+    const doneBtn = document.createElement('button');
+    deleteBtn.classList.add('deleteBtn');
+    doneBtn.classList.add('markDoneBtn');
+    deleteBtn.innerHTML = 'DEL';
+    doneBtn.innerHTML = 'DONE';
+
+    deleteBtn.onclick = () => itemDiv.remove();
+    doneBtn.onclick = () => itemDiv.firstChild.classList.toggle('done');
+
     itemDiv.classList.add('item');
     if (i % 2 == 0) {
       itemDiv.classList.add('even');
     } else {
       itemDiv.classList.add('odd');
     }
+
     listContainer.appendChild(itemDiv);
     itemDiv.appendChild(item);
+    itemDiv.appendChild(doneBtn);
+    itemDiv.appendChild(deleteBtn);
     item.innerHTML = `> ${list[i - 1]}`;
   }
   const dueDateDisplay = document.createElement('p');

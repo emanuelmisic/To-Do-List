@@ -93,4 +93,8 @@
 
 .due {
   border: 1px solid red;
+}
+
+.done {
+  text-decoration: line-through;
 }/*# sourceMappingURL=style.css.map */

@@ -65,6 +65,9 @@
 .prompt button {
   margin-top: 10px;
 }
+.prompt #warning {
+  align-self: center;
+}
 
 .even {
   background-color: rgb(255, 205, 129);

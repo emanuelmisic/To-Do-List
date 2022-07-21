@@ -70,7 +70,11 @@ function displayList(name, list, dueDate) {
   container.appendChild(listContainer);
 
   listName.innerHTML = name;
-  dueDateDisplay.innerHTML = dueDate;
+
+  dueDateDisplay.innerHTML = `${dueDate.slice(8, 10)}.${dueDate.slice(
+    5,
+    7
+  )}.${dueDate.slice(0, 4)}.`;
 }
 
 function addItem(id) {

@@ -78,6 +78,13 @@ function displayList(id, name, list, dueDate) {
   const listContainer = document.createElement('div');
   listContainer.classList.add('list');
   listContainer.id = `list${id}`;
+  const removeListBtn = document.createElement('button');
+  removeListBtn.classList.add('removeList');
+  listContainer.appendChild(removeListBtn);
+  removeListBtn.innerHTML = 'X';
+
+  removeListBtn.onclick = () => listContainer.remove();
+
   const listName = document.createElement('h3');
   listName.classList.add('listName');
   listContainer.appendChild(listName);

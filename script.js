@@ -53,6 +53,7 @@ function listPrompt() {
   };
   cancelBtn.onclick = () => {
     promptDiv.classList.add('hide');
+    listNameInput.placeholder = '';
     for (let i = 2; i < id; i++) {
       const item = document.querySelector(`#listItem${i}`);
       item.remove();

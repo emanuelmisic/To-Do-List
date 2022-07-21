@@ -28,6 +28,7 @@
   align-items: center;
   justify-content: space-evenly;
   margin-top: 50px;
+  min-height: 500px;
   background-color: rgb(252, 252, 252);
 }
 .container .list {
@@ -50,7 +51,7 @@
   background-color: white;
   padding: 5px 10px;
   width: 250px;
-  height: 300px;
+  min-height: 300px;
   left: calc(50% - 125px);
   top: calc(50% - 250px);
   border: 1px solid black;
@@ -67,6 +68,15 @@
 }
 .prompt #warning {
   align-self: center;
+}
+.prompt input::-moz-placeholder {
+  color: red;
+}
+.prompt input:-ms-input-placeholder {
+  color: red;
+}
+.prompt input::placeholder {
+  color: red;
 }
 
 .even {

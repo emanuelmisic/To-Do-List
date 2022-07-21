@@ -8,6 +8,7 @@ const listNameInput = document.querySelector('#listName');
 const dueDateInput = document.querySelector('#dueDate');
 const expandListBtn = document.querySelector('#addListInput');
 const generateListBtn = document.querySelector('#generateListBtn');
+const cancelBtn = document.querySelector('#cancelBtn');
 
 makeListBtn.onclick = () => listPrompt();
 
@@ -34,6 +35,15 @@ function listPrompt() {
     const item = document.querySelector('#listItem1');
     item.value = '';
     generateList(listNameInput.value, list, dueDateInput.value);
+  };
+  cancelBtn.onclick = () => {
+    promptDiv.classList.add('hide');
+    for (let i = 2; i < id; i++) {
+      const item = document.querySelector(`#listItem${i}`);
+      item.remove();
+    }
+    const item = document.querySelector('#listItem1');
+    item.value = '';
   };
 }
 
@@ -89,4 +99,5 @@ function addItem(id) {
   promptDiv.appendChild(itemInput);
   promptDiv.appendChild(expandListBtn);
   promptDiv.appendChild(generateListBtn);
+  promptDiv.appendChild(cancelBtn);
 }

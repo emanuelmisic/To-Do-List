@@ -1,5 +1,6 @@
 const makeListBtn = document.querySelector('#makeListBtn');
 const container = document.querySelector('.container');
+let listID = 1;
 
 const promptDiv = document.querySelector('.prompt');
 
@@ -41,12 +42,16 @@ function generateList(name, list, dueDate) {
   let itemList = list;
   let date = dueDate;
   promptDiv.classList.add('hide');
-  displayList(listName, itemList, date);
+  if (container.childElementCount != 0) {
+    listID = container.childElementCount + 1;
+  }
+  displayList(listID, listName, itemList, date);
 }
 
-function displayList(name, list, dueDate) {
+function displayList(id, name, list, dueDate) {
   const listContainer = document.createElement('div');
   listContainer.classList.add('list');
+  listContainer.id = `list${id}`;
   const listName = document.createElement('h3');
   listName.classList.add('listName');
   listContainer.appendChild(listName);

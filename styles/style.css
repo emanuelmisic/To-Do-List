@@ -37,6 +37,18 @@
   text-align: center;
   background-color: bisque;
 }
+.container .list .removeList {
+  float: right;
+  background: transparent;
+  border: none;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.container .list .removeList:hover {
+  font-weight: 800;
+  font-size: large;
+}
 .container .list .item {
   display: flex;
   align-items: center;

@@ -15,7 +15,7 @@ makeListBtn.onclick = () => listPrompt();
 
 function listPrompt() {
   let id = 2;
-  const list = [];
+  let list = [];
   promptDiv.classList.remove('hide');
   listNameInput.value = '';
   dueDateInput.value = '';
@@ -34,6 +34,7 @@ function listPrompt() {
         if (item.value == '') {
           validation = false;
           warning.classList.remove('hide');
+          list = [];
         } else {
           validation = true;
           list.push(`${item.value}`);
@@ -96,7 +97,7 @@ function displayList(id, name, list, dueDate) {
     deleteBtn.classList.add('deleteBtn');
     doneBtn.classList.add('markDoneBtn');
     deleteBtn.innerHTML = 'DEL';
-    doneBtn.innerHTML = 'DONE';
+    doneBtn.innerHTML = '&#9989;';
 
     deleteBtn.onclick = () => itemDiv.remove();
     doneBtn.onclick = () => itemDiv.firstChild.classList.toggle('done');

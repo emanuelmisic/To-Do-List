@@ -55,6 +55,24 @@
   justify-content: flex-start;
   padding-left: 2px;
 }
+.container .list .controls {
+  margin-right: 10px;
+  margin-left: auto;
+}
+.container .list .deleteBtn,
+.container .list .markDoneBtn {
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.container .list .deleteBtn:hover,
+.container .list .markDoneBtn:hover {
+  font-size: 1.3rem;
+}
 
 .prompt {
   display: flex;
@@ -109,4 +127,5 @@
 
 .done {
   text-decoration: line-through;
+  opacity: 0.5;
 }/*# sourceMappingURL=style.css.map */

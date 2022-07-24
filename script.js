@@ -92,11 +92,13 @@ function displayList(id, name, list, dueDate) {
   for (let i = 1; i <= list.length; i++) {
     const itemDiv = document.createElement('div');
     const item = document.createElement('p');
+    const controls = document.createElement('div');
+    controls.classList.add('controls');
     const deleteBtn = document.createElement('button');
     const doneBtn = document.createElement('button');
     deleteBtn.classList.add('deleteBtn');
     doneBtn.classList.add('markDoneBtn');
-    deleteBtn.innerHTML = 'DEL';
+    deleteBtn.innerHTML = '&#10060;';
     doneBtn.innerHTML = '&#9989;';
 
     deleteBtn.onclick = () => itemDiv.remove();
@@ -111,8 +113,9 @@ function displayList(id, name, list, dueDate) {
 
     listContainer.appendChild(itemDiv);
     itemDiv.appendChild(item);
-    itemDiv.appendChild(doneBtn);
-    itemDiv.appendChild(deleteBtn);
+    itemDiv.appendChild(controls);
+    controls.appendChild(doneBtn);
+    controls.appendChild(deleteBtn);
     item.innerHTML = `> ${list[i - 1]}`;
   }
   const dueDateDisplay = document.createElement('p');

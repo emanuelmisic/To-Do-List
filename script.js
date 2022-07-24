@@ -17,6 +17,7 @@ function listPrompt() {
   let id = 2;
   let list = [];
   promptDiv.classList.remove('hide');
+  makeListBtn.disabled = true;
   listNameInput.value = '';
   dueDateInput.value = '';
 
@@ -49,11 +50,13 @@ function listPrompt() {
         const item = document.querySelector('#listItem1');
         item.value = '';
         generateList(listNameInput.value, list, dueDateInput.value);
+        makeListBtn.disabled = false;
       }
     }
   };
   cancelBtn.onclick = () => {
     promptDiv.classList.add('hide');
+    makeListBtn.disabled = false;
     listNameInput.placeholder = '';
     for (let i = 2; i < id; i++) {
       const item = document.querySelector(`#listItem${i}`);

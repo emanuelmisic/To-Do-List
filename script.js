@@ -133,6 +133,28 @@ function displayList(id, name, list, dueDate) {
     5,
     7
   )}.${dueDate.slice(0, 4)}.`;
+  let today = new Date();
+  let midDate = new Date(
+    dueDate.slice(0, 4),
+    dueDate.slice(6, 7) - 1,
+    dueDate.slice(8, 10) - 3
+  );
+  let theDueDate = new Date(
+    dueDate.slice(0, 4),
+    dueDate.slice(6, 7) - 1,
+    dueDate.slice(8, 10)
+  );
+  console.log(today);
+  console.log(midDate);
+  console.log(theDueDate);
+  if (today > midDate && theDueDate > today) {
+    listContainer.classList.add('close');
+  } else if (today > theDueDate) {
+    listContainer.classList.add('due');
+  } else {
+    listContainer.classList.remove('due');
+    listContainer.classList.remove('close');
+  }
 }
 
 function addItem(id) {

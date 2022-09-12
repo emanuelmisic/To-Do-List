@@ -86,6 +86,7 @@ function displayList(id, name, list, dueDate) {
   removeListBtn.classList.add('removeList');
   listContainer.appendChild(removeListBtn);
   removeListBtn.innerHTML = 'X';
+  removeListBtn.title = 'Remove This List';
 
   removeListBtn.onclick = () => listContainer.remove();
 
@@ -101,6 +102,8 @@ function displayList(id, name, list, dueDate) {
     const doneBtn = document.createElement('button');
     deleteBtn.classList.add('deleteBtn');
     doneBtn.classList.add('markDoneBtn');
+    doneBtn.title = 'Toggle done/undone';
+    deleteBtn.title = 'Delete Item';
     deleteBtn.innerHTML = '&#10060;';
     doneBtn.innerHTML = '&#9989;';
 

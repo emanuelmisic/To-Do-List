@@ -122,7 +122,7 @@ function displayList(id, name, list, dueDate) {
     itemDiv.appendChild(controls);
     controls.appendChild(doneBtn);
     controls.appendChild(deleteBtn);
-    item.innerHTML = `> ${list[i - 1]}`;
+    item.innerHTML = `&#160;> ${list[i - 1]}`;
   }
   const dueDateDisplay = document.createElement('p');
   dueDateDisplay.classList.add('dueDate');

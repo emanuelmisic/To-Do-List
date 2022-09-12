@@ -21,6 +21,13 @@ function listPrompt() {
   listNameInput.value = '';
   dueDateInput.value = '';
 
+  let today = new Date().toLocaleDateString();
+  let setMin = `${today.slice(8, 12)}-${today.slice(4, 6)}-${today.slice(
+    0,
+    2
+  )}`;
+  dueDateInput.min = `${setMin}`;
+
   expandListBtn.onclick = () => {
     addItem(id);
     id++;

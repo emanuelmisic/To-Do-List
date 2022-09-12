@@ -121,14 +121,6 @@
   display: none;
 }
 
-.due {
-  border: 1px solid red;
-}
-
-.close {
-  border: 1px solid orange;
-}
-
 .done {
   text-decoration: line-through;
   opacity: 0.5;

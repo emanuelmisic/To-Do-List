@@ -81,13 +81,16 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  background-color: white;
-  padding: 5px 10px;
+  background-color: rgb(238, 238, 238);
+  padding: 10px 10px;
+  padding-bottom: 50px;
   width: 250px;
-  min-height: 300px;
+  min-height: 250px;
   left: calc(50% - 125px);
   top: calc(50% - 250px);
   border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 12px 8px 15px 11px rgba(0, 0, 0, 0.55);
 }
 .prompt label {
   margin-top: 5px;
